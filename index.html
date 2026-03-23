@@ -3,467 +3,165 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Real Estate Landing</title>
 
-<style>
-:root{
-  --primary:#0054A1;
-  --gold:#C69C00;
-  --green:#1A964A;
-}
+<title>CrytsalGateway</title>
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Segoe UI', sans-serif;
-}
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-body{
-  background:#f8f9fb;
-}
+<!-- Owl Carousel -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-/* NAVBAR */
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 8%;
-  background:#fff;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  transition:0.3s;
-}
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-.navbar.scrolled{
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-.logo img{
-  height:50px;
-}
-
-.nav-links{
-  display:flex;
-  gap:30px;
-}
-
-.nav-links a{
-  text-decoration:none;
-  color:var(--primary);
-  font-weight:500;
-}
-
-.nav-links a:hover{
-  color:var(--gold);
-}
-
-.nav-btn{
-  padding:10px 20px;
-  background:var(--primary);
-  color:#fff;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-.nav-btn:hover{
-  background:var(--gold);
-  color:#000;
-}
-
-.menu-toggle{
-  display:none;
-  font-size:24px;
-  color:var(--primary);
-  cursor:pointer;
-}
-
-/* HERO */
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-justify-content: space-around;
-  padding:60px 8%;
-  position:relative;
-  overflow:hidden;
-  background:#fff;
-}
-
-/* LIGHT BACKGROUND EFFECT */
-.hero::before{
-  content:"";
-  position:absolute;
-  width:700px;
-  height:700px;
-  background:radial-gradient(circle, rgba(0,84,161,0.08), transparent);
-  top:-200px;
-  left:-200px;
-}
-
-/* TEXT */
-.hero-text{
-  max-width:520px;
-  position:relative;
-  z-index:1;
-}
-
-.small-title{
-  font-size:14px;
-  color:var(--green);
-  margin-bottom:10px;
-}
-
-.hero h1{
-  font-size:48px;
-  line-height:1.2;
-  margin-bottom:20px;
-  color:var(--primary);
-}
-
-.hero p{
-  color:#555;
-  margin-bottom:25px;
-}
-
-/* BUTTON */
-.btn{
-  padding:14px 28px;
-  background:var(--primary);
-  border:none;
-  border-radius:6px;
-  color:#fff;
-  cursor:pointer;
-}
-
-.btn:hover{
-  background:var(--gold);
-  color:#000;
-}
-
-/* IMAGE */
-.hero-image{
-  position:relative;
-  z-index:1;
-}
-
-.hero-image img{
-  width:420px;
-  border-radius:16px;
-  box-shadow:0 20px 60px rgba(0,0,0,0.15);
-}
-
-/* BADGE */
-.badge{
-  position:absolute;
-  top:-20px;
-  left:-20px;
-  background:var(--primary);
-  color:#fff;
-  padding:20px;
-  border-radius:50%;
-  text-align:center;
-}
-
-/* STATS */
-.stats{
-  position:absolute;
-  right:40px;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:1;
-}
-
-.stat{
-  margin-bottom:30px;
-  text-align:center;
-}
-
-.stat img{
-  width:70px;
-  border-radius:10px;
-  margin-bottom:10px;
-}
-
-.stat h3{
-  color:var(--primary);
-}
-
-.stat p{
-  color:#777;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-
-  .nav-links{
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#fff;
-    flex-direction:column;
-    text-align:center;
-    display:none;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .nav-links a{
-    padding:15px 0;
-    border-bottom:1px solid #eee;
-  }
-
-  .menu-toggle{
-    display:block;
-  }
-
-  .nav-btn{
-    display:none;
-  }
-
-  .hero{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .hero-image img{
-    width:100%;
-    margin-top:30px;
-  }
-
-  .stats{
-    position:static;
-    transform:none;
-    margin-top:20px;
-    display:flex;
-    gap:20px;
-    justify-content:center;
-  }
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
-  <div class="logo">
-    <img src="https://www.greenfieldcrystalgateway.com/img/logo.png">
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+
+  <a class="navbar-brand" href="#">
+    <img src="./images/logo.png" class="logo" loading="lazy">
+  </a>
+
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about-modern">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#plots">Plots</a></li>
+      <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+    </ul>
   </div>
 
-  <div class="nav-links" id="navLinks">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Plots</a>
-    <a href="#">Amenities</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
-  </div>
-
-  <button class="nav-btn">Enquire Now</button>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-
-  <div class="hero-text">
-    <div class="small-title">🏠 Real Estate Agency</div>
-    <h1>Your Guide To Finding The Perfect Home In London</h1>
-    <p>
-      Our team of dedicated experts is here to guide you every step of the way.
-    </p>
-    <button class="btn">Buy Now Property →</button>
-  </div>
-
-  <div class="hero-image">
-    <div class="badge">
-      <strong>25K</strong><br>Property
-    </div>
-    <img src="https://kingarchitect.dexignzone.com/react/demo/static/media/about.24c38060.png">
-  </div>
-
-  <div class="stats">
-    <div class="stat">
-      <img src="https://html.vikinglab.agency/homz/assets/img/all-images/header-img8.png">
-      <h3>5.0</h3>
-      <p>Rating Stars</p>
-    </div>
-
-    <div class="stat">
-      <h3>89K+</h3>
-      <p>Happy Clients</p>
-    </div>
-
-    <div class="stat">
-      <h3>$40M+</h3>
-      <p>Property Sold</p>
+<div class="owl-carousel">
+  
+  <div class="item">
+    <img src="./images/gate.jpg" loading="lazy">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Build Your Dream Home</h1>
+      <p>Peaceful lifestyle with modern amenities</p>
+      <a href="#" class="hero-btn">Book Site Visit</a>
     </div>
   </div>
 
+  <div class="item">
+    <img src="./images/plot.jpg" loading="lazy">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Premium Plots in Coimbatore</h1>
+      <p>Secure your future with high ROI investments</p>
+      <a href="#" class="hero-btn">Explore Now</a>
+    </div>
+  </div>
+    <!-- Slide 3 -->
+  <div class="item">
+    <img src="./images/ground.jpg" loading="lazy">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Perfect Pitch. Perfect Game.</h1>
+      <p>Maintain your form with top-quality turf</p>
+      <a href="#" class="hero-btn">Get Membership</a>
+    </div>
+  </div>
+
+
+
+</div>
 </section>
 
-<script>
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("active");
-}
 
-window.addEventListener("scroll",()=>{
-  document.querySelector(".navbar")
-    .classList.toggle("scrolled", window.scrollY > 50);
-});
-</script>
+<section class="about-modern" id="about-modern">
+<div class="container">
+<div class="row align-items-center">
 
-</body>
-</html>
+  <!-- LEFT STATS -->
+  <div class="col-lg-2 col-md-4" data-aos="fade-right">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plots for Sale</title>
+    <div class="about-stats">
+<div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+  <h2 class="counter" data-target="5">0</h2>
+  <p>Rating Stars</p>
+  <div class="stat-line"></div>
+</div>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+  <h2 class="counter" data-target="89000">0</h2>
+  <p>Assets</p>
+  <div class="stat-line"></div>
+</div>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+  <h2 class="counter" data-target="40">0</h2>
+  <p>Total Asset Sold (M+)</p>
+</div>
 
-<style>
-body{
-  font-family:'Poppins',sans-serif;
-  background:#f5f6f7;
-}
 
-/* SECTION */
-.projects{
-  padding:80px 20px;
-}
+    </div>
 
-.section-title{
-  text-align:center;
-  margin-bottom:60px;
-}
+  </div>
 
-.section-title span{
-  color:#C69C00;
-  letter-spacing:2px;
-  font-weight:600;
-}
+  <!-- IMAGE -->
+  <div class="col-lg-5 col-md-8" data-aos="zoom-in">
+    <div class="about-img">
+      <img src="https://www.greenfieldcrystalgateway.com/img/others/11.jpg" alt="About Image" loading="lazy">
+    </div>
+  </div>
 
-.section-title h2{
-  font-size:38px;
-  color:#000;
-}
+  <!-- CONTENT -->
+  <div class="col-lg-5" data-aos="fade-left">
 
-/* CARD */
-.project-card{
-  background:#fff;
-  border-radius:15px;
-  overflow:hidden;
-  transition:.4s;
-  box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
+    <div class="about-content">
 
-/* IMAGE */
-.project-img{
-  position:relative;
-}
+      <small><i class="fas fa-home"></i> About Real Estate Agency</small>
 
-.project-img img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-}
+      <h2>Meet The Experts Behind Your Real Estate Success</h2>
 
-/* BADGE */
-.plot-badge{
-  position:absolute;
-  top:15px;
-  left:15px;
-  background:#0054A1;
-  color:#fff;
-  padding:6px 12px;
-  font-size:12px;
-  border-radius:20px;
-}
+      <p>
+        At Crystal Gateway, we believe that finding your perfect property should be an exciting journey, not a stressful one. 
+        Based in Sulur, Coimbatore, we guide you through every step with clarity and confidence.
+      </p>
 
-/* CONTENT */
-.project-content{
-  padding:20px;
-}
+      <p>
+        With expert knowledge, personalized service, and strong market insights, we help you make smart and secure investment decisions.
+      </p>
 
-.project-content h5{
-  color:#0054A1;
-  font-weight:600;
-}
+      <a href="#" class="about-btn">
+        <i class="fas fa-home"></i> Discover More
+      </a>
 
-.project-content p{
-  font-size:14px;
-  color:#555;
-}
+    </div>
 
-/* LOCATION */
-.location{
-  margin-top:10px;
-  font-size:14px;
-  color:#1A964A;
-  font-weight:500;
-}
+  </div>
 
-.location i{
-  color:#C69C00;
-  margin-right:6px;
-}
+</div>
+</div>
+</section>
 
-/* FEATURES */
-.features{
-  margin-top:10px;
-  font-size:13px;
-  color:#333;
-}
 
-.features i{
-  color:#91C74A;
-  margin-right:5px;
-}
-
-/* BUTTON */
-.project-btn{
-  display:inline-block;
-  margin-top:12px;
-  padding:8px 18px;
-  background:#0054A1;
-  color:#fff;
-  border-radius:20px;
-  font-size:13px;
-  text-decoration:none;
-}
-
-.project-btn:hover{
-  background:#C69C00;
-  color:#000;
-}
-
-/* HOVER */
-.project-card:hover{
-  transform:translateY(-10px);
-}
-</style>
-</head>
-
-<body>
-
-<section class="projects">
+<section class="projects" id="plots">
 
 <div class="container">
 
+<!-- TITLE -->
 <div class="section-title">
   <span>PLOTS FOR SALE</span>
   <h2>Premium Land Projects in Coimbatore</h2>
@@ -472,9 +170,9 @@ body{
 <div class="row g-4">
 
 <!-- 1 -->
-<div class="col-lg-4 col-md-6">
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="project-card">
-    <div class="project-img">
+    <div class="project-img" data-aos="zoom-in">
       <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
       <div class="plot-badge"><i class="fas fa-map"></i> Plot</div>
     </div>
@@ -483,15 +181,14 @@ body{
       <p>DTCP approved plots with wide roads and clear title.</p>
       <div class="location"><i class="fas fa-location-dot"></i> Saravanampatti</div>
       <div class="features"><i class="fas fa-check-circle"></i> Ready to Build</div>
-      <!-- <a href="#" class="project-btn">View Details</a> -->
     </div>
   </div>
 </div>
 
 <!-- 2 -->
-<div class="col-lg-4 col-md-6">
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
   <div class="project-card">
-    <div class="project-img">
+    <div class="project-img" data-aos="zoom-in">
       <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb">
       <div class="plot-badge"><i class="fas fa-map"></i> Plot</div>
     </div>
@@ -500,15 +197,14 @@ body{
       <p>Peaceful plots surrounded by greenery and fresh air.</p>
       <div class="location"><i class="fas fa-location-dot"></i> Kalapatti</div>
       <div class="features"><i class="fas fa-check-circle"></i> Eco Friendly</div>
-      <!-- <a href="#" class="project-btn">View Details</a> -->
     </div>
   </div>
 </div>
 
 <!-- 3 -->
-<div class="col-lg-4 col-md-6">
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
   <div class="project-card">
-    <div class="project-img">
+    <div class="project-img" data-aos="zoom-in">
       <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
       <div class="plot-badge"><i class="fas fa-map"></i> Plot</div>
     </div>
@@ -517,15 +213,14 @@ body{
       <p>Located near highways and key city access points.</p>
       <div class="location"><i class="fas fa-location-dot"></i> Peelamedu</div>
       <div class="features"><i class="fas fa-check-circle"></i> Prime Location</div>
-      <!-- <a href="#" class="project-btn">View Details</a> -->
     </div>
   </div>
 </div>
 
 <!-- 4 -->
-<div class="col-lg-4 col-md-6">
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
   <div class="project-card">
-    <div class="project-img">
+    <div class="project-img" data-aos="zoom-in">
       <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb">
       <div class="plot-badge"><i class="fas fa-map"></i> Plot</div>
     </div>
@@ -534,15 +229,14 @@ body{
       <p>Gated layout with street lights and infrastructure.</p>
       <div class="location"><i class="fas fa-location-dot"></i> Vadavalli</div>
       <div class="features"><i class="fas fa-check-circle"></i> Gated Community</div>
-      <!-- <a href="#" class="project-btn">View Details</a> -->
     </div>
   </div>
 </div>
 
 <!-- 5 -->
-<div class="col-lg-4 col-md-6">
+<div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
   <div class="project-card">
-    <div class="project-img">
+    <div class="project-img" data-aos="zoom-in">
       <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
       <div class="plot-badge"><i class="fas fa-map"></i> Plot</div>
     </div>
@@ -551,7 +245,492 @@ body{
       <p>High appreciation value plots in developing zones.</p>
       <div class="location"><i class="fas fa-location-dot"></i> Kovaipudur</div>
       <div class="features"><i class="fas fa-check-circle"></i> Investment Ready</div>
-      <!-- <a href="#" class="project-btn">View Details</a> -->
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+</section>
+<section class="amenities-section" id="amenities">
+
+<div class="container">
+
+<!-- CENTER TITLE -->
+<div class="section-title">
+  <span>PROJECT AMENITIES</span>
+  <h1>Amenities We Offer</h1>
+  <p>Luxury living with world-class facilities</p>
+</div>
+
+<!-- AMENITIES GRID -->
+<div class="row g-4">
+
+<!-- 1 -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="amenity-card gold">
+    <h5>CCTV Surveillance</h5>
+    <p>24/7 monitored security</p>
+    <img src="https://cdn-icons-png.freepik.com/256/5897/5897104.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label" class="icon">
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="amenity-card light">
+    <h5>Kids Play Area</h5>
+    <p>Safe play zone for children</p>
+    <img src="https://cdn-icons-png.freepik.com/256/16859/16859981.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label" class="icon">
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="amenity-card gold">
+    <h5>Grand Arch</h5>
+    <p>Elegant entrance design</p>
+    <img src="https://cdn-icons-png.freepik.com/256/18030/18030851.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label" class="icon">
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="amenity-card light">
+    <h5>Outdoor Gym</h5>
+    <p>Open-air fitness area</p>
+    <img src="https://cdn-icons-png.freepik.com/256/7118/7118154.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label" class="icon">
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="amenity-card gold">
+    <h5>Cricket Ground</h5>
+    <p>Secure boundary walls</p>
+    <img src="https://cdn-icons-png.freepik.com/256/17559/17559322.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label" class="icon">
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="amenity-card light">
+    <h5>Grand Clubhouse</h5>
+    <p>Premium lifestyle space</p>
+    <img src="https://cdn-icons-png.freepik.com/256/3715/3715622.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label" class="icon">
+  </div>
+</div>
+
+<!-- 7 -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="amenity-card gold">
+    <h5>Landscaped Gardens</h5>
+    <p>Beautiful greenery</p>
+    <img src="https://cdn-icons-png.freepik.com/256/4128/4128114.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label" class="icon">
+  </div>
+</div>
+
+<!-- 8 -->
+<div class="col-lg-3 col-md-4 col-sm-6">
+  <div class="amenity-card light">
+    <h5>Community Hall</h5>
+    <p>Events & gatherings</p>
+    <img src="https://cdn-icons-png.freepik.com/256/8904/8904640.png?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_white_label" class="icon">
+  </div>
+</div>
+
+
+
+</div>
+
+</div>
+</section>
+<!-- ================= WHY INVEST SECTION ================= -->
+<section class="invest-section">
+<div class="container">
+
+<div class="section-title text-center mb-5">
+  <span>WHY INVEST</span>
+  <h2>Smart Investment. Better Lifestyle. Future Growth.</h2>
+</div>
+
+<div class="row g-4 align-items-center">
+
+  <!-- LEFT SIDE -->
+  <div class="col-lg-4">
+
+    <div class="invest-box">
+      <i class="fas fa-chart-line"></i>
+      <h4>High ROI Potential</h4>
+      <p>
+        Invest in fast-growing locations with strong land appreciation and high resale value.
+      </p>
+    </div>
+
+    <div class="invest-box">
+      <i class="fas fa-coins"></i>
+      <h4>Affordable Investment</h4>
+      <p>
+        Easy EMI options and bank loan support make it simple to start your investment journey.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- CENTER IMAGE -->
+  <div class="col-lg-4 text-center">
+    <div class="invest-center">
+      <img src="https://www.greenfieldcrystalgateway.com/img/bg/21.jpg" alt="Investment">
+      <!-- <div class="center-badge">100+ Acres Premium Layout</div> -->
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="col-lg-4">
+
+    <div class="invest-box">
+      <i class="fas fa-leaf"></i>
+      <h4>Healthy Lifestyle</h4>
+      <p>
+        Surrounded by greenery, parks, and open spaces for a peaceful and pollution-free life.
+      </p>
+    </div>
+
+    <div class="invest-box">
+      <i class="fas fa-city"></i>
+      <h4>Future Growth Area</h4>
+      <p>
+        Located near major roads, schools, and developing infrastructure for long-term value.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+</section>
+
+
+
+
+<div class="container">
+<!-- CENTER TITLE -->
+<div class="section-title">
+  <span>Our Gallery</span>
+  <h2>Explore Our Gallery</h2>
+
+</div>
+
+<section class="gallery">
+
+  <div class="gallery-grid">
+<div class="gallery-item">
+  <img src="https://www.greenfieldcrystalgateway.com/img/gallery/2.jpg" 
+       loading="lazy" 
+       alt="DTCP approved residential plots layout view" 
+       title="Residential Plot Layout">
+</div>
+
+<div class="gallery-item">
+  <img src="https://www.greenfieldcrystalgateway.com/img/gallery/3.jpg" 
+       loading="lazy" 
+       alt="Wide road access inside plotted development site" 
+       title="Internal Roads">
+</div>
+
+<div class="gallery-item">
+  <img src="https://www.greenfieldcrystalgateway.com/img/gallery/4.jpg" 
+       loading="lazy" 
+       alt="Gated community entrance for land project" 
+       title="Main Entrance">
+</div>
+
+<div class="gallery-item">
+  <img src="https://www.greenfieldcrystalgateway.com/img/gallery/5.jpg" 
+       loading="lazy" 
+       alt="Green landscape and park area in plots project" 
+       title="Park Area">
+</div>
+
+<div class="gallery-item">
+  <img src="https://www.greenfieldcrystalgateway.com/img/gallery/6.jpg" 
+       loading="lazy" 
+       alt="Street lights and infrastructure in plotted layout" 
+       title="Street Lights">
+</div>
+
+<div class="gallery-item">
+  <img src="https://www.greenfieldcrystalgateway.com/img/gallery/7.jpg" 
+       loading="lazy" 
+       alt="Residential plots ready for construction" 
+       title="Ready Plots">
+</div>
+
+
+
+  </div>
+
+</section>
+</div>
+<!-- ================= CTA SECTION ================= -->
+<section class="cta-section">
+  <div class="cta-overlay"></div>
+
+  <div class="cta-content">
+    <p>Don’t hesitate to contact us</p>
+    <h2>MAKE AN APPOINTMENT NOW</h2>
+    <h3>+91 98765 43210</h3>
+
+    <a href="tel:9876543210" class="cta-btn btn-call">
+      <i class="fas fa-phone"></i> Call Now
+    </a>
+
+
+  </div>
+</section>
+
+
+<!-- Floating CTA -->
+<div class="floating-cta">
+
+  <!-- Call -->
+  <a href="tel:+919043637675" class="cta-btn call">
+    📞 Call
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/919043637675" target="_blank" class="cta-btn whatsapp">
+    💬 WhatsApp
+  </a>
+
+
+</div>
+
+
+
+
+<section class="testimonial-section">
+  <h5 class="subtitle">Testimonials</h5>
+  <h2 class="title">Real Stories from Happy Homeowners</h2>
+
+  <div class="testimonial-card">
+
+    <!-- IMAGE -->
+    <div class="testimonial-img">
+      <img id="testimonialImage">
+    </div>
+
+    <!-- CONTENT -->
+    <div class="testimonial-content">
+      <span class="quote">“</span>
+      <h3 id="testimonialTitle"></h3>
+      <p id="testimonialText"></p>
+
+      <div class="user">
+        <img id="userImage">
+        <div>
+          <h4 id="userName"></h4>
+          <span id="userRole"></span>
+        </div>
+      </div>
+
+      <div class="dots" id="dots"></div>
+    </div>
+
+    <!-- ✅ FONT AWESOME ARROWS -->
+    <div class="arrows">
+      <button onclick="prevSlide()" class="arrow-btn">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button onclick="nextSlide()" class="arrow-btn">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+  <div class="main">
+    
+    <section class="contact-section">
+    <div class="container">
+    <div class="contact-card row g-0">
+    
+    <!-- LEFT -->
+    <div class="col-lg-6 d-none d-lg-block left-side">
+      <div class="left-content">
+        <span class="badge-top">Limited Plots Available</span>
+        <h2>Invest in Your Future Today</h2>
+        <p>DTCP Approved | Prime Location | High ROI</p>
+      </div>
+    </div>
+    
+    <!-- RIGHT -->
+<!-- RIGHT -->
+<div class="col-lg-6">
+<div class="form-area">
+
+<h3 class="mb-4">Book Your Plot Visit</h3>
+
+<form>
+
+<div class="form-group icon-input">
+  <i class="fa fa-user"></i>
+  <input type="text" required>
+  <label>Full Name</label>
+</div>
+
+<div class="form-group icon-input">
+  <i class="fa fa-phone"></i>
+  <input type="tel" required>
+  <label>Phone Number</label>
+</div>
+
+<div class="form-group icon-input">
+  <i class="fa fa-map-location-dot"></i>
+  <select required>
+    <option value="" disabled selected></option>
+    <option>Residential Plot</option>
+    <option>Commercial Plot</option>
+    <option>Farm Land</option>
+  </select>
+  <label>Select Plot Type</label>
+</div>
+
+<div class="range-box">
+  <label><i class="fa fa-indian-rupee-sign"></i> Budget Range</label>
+  <input type="range" min="500000" max="5000000">
+</div>
+
+<div class="row g-3">
+
+  <div class="col-md-6">
+    <button class="submit-btn w-100">
+      <i class="fa fa-calendar-check"></i> Get Free Site Visit
+    </button>
+  </div>
+
+  <div class="col-md-6">
+    <a href="#" class="whatsapp-btn w-100">
+      <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+  </div>
+
+</div>
+
+
+
+
+<div class="trust">
+  <span><i class="fa fa-circle-check"></i> DTCP Approved</span>
+  <span><i class="fa fa-building-columns"></i> Bank Loan Available</span>
+  <span><i class="fa fa-shield-halved"></i> 100% Secure</span>
+</div>
+
+</form>
+
+</div>
+</div>
+    </div>
+    </div>
+    </section>
+
+  </div>
+
+<section class="faq-section">
+<div class="container">
+<div class="row g-4 align-items-center">
+
+<!-- LEFT IMAGE -->
+<div class="col-lg-5 position-relative">
+  <div class="faq-image">
+    <img src="https://www.greenfieldcrystalgateway.com/img/team/7.jpg" loading="lazy">
+
+    <div class="faq-overlay">
+      <h5>Need Help?</h5>
+      <p>Answers about plots & buying process</p>
+    </div>
+  </div>
+</div>
+
+<!-- RIGHT FAQ -->
+<div class="col-lg-7">
+
+<div class="section-title">
+  <span>FAQ</span>
+  <h2>Common Questions About Plots</h2>
+</div>
+
+<div class="accordion" id="faqAccordion">
+
+<!-- 1 -->
+<div class="accordion-item">
+  <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+    <i class="fas fa-file-alt"></i> Are plots DTCP approved?
+  </button>
+  <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+    <div class="accordion-body">
+      Yes, all plots are DTCP approved with clear legal documentation.
+    </div>
+  </div>
+</div>
+
+<!-- 2 -->
+<div class="accordion-item">
+  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+    <i class="fas fa-map"></i> What plot sizes are available?
+  </button>
+  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+    <div class="accordion-body">
+      Plot sizes range from 600 sq.ft to 2400 sq.ft.
+    </div>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="accordion-item">
+  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+    <i class="fas fa-location-dot"></i> Where are the plots located?
+  </button>
+  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+    <div class="accordion-body">
+      Our plots are in prime Coimbatore locations with good connectivity.
+    </div>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="accordion-item">
+  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+    <i class="fas fa-credit-card"></i> What is the payment process?
+  </button>
+  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+    <div class="accordion-body">
+      Booking starts with advance payment and flexible options are available.
+    </div>
+  </div>
+</div>
+
+<!-- 5 -->
+<div class="accordion-item">
+  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq5">
+    <i class="fas fa-file-signature"></i> Is registration immediate?
+  </button>
+  <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+    <div class="accordion-body">
+      Yes, all plots are ready for immediate registration.
+    </div>
+  </div>
+</div>
+
+<!-- 6 -->
+<div class="accordion-item">
+  <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq6">
+    <i class="fas fa-shield-alt"></i> Is the layout secured?
+  </button>
+  <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+    <div class="accordion-body">
+      Yes, layouts include compound walls, roads, and street lights.
     </div>
   </div>
 </div>
@@ -560,7 +739,97 @@ body{
 
 </div>
 
+</div>
+</div>
 </section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer-modern">
+
+<div class="container">
+
+<div class="row">
+
+  <!-- ABOUT -->
+  <div class="col-lg-4 col-md-6">
+    <div class="footer-box"> 
+    <!-- LOGO -->
+    <a href="#" class="footer-logo">
+      <img src="./images/logo-2.png" alt="Logo" loading="lazy">
+    </a>
+      <p>
+        We provide premium plots in prime locations with clear titles and modern infrastructure. 
+        Your trusted partner in real estate investments.
+      </p>
+
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="col-lg-2 col-md-6">
+    <div class="footer-box">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Plots</a></li>
+        <li><a href="#">Amenities</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="col-lg-3 col-md-6">
+    <div class="footer-box">
+      <h5>Projects</h5>
+      <ul>
+        <li><a href="#">Green Valley Plots</a></li>
+        <li><a href="#">Nature Green Plots</a></li>
+        <li><a href="#">City Link Plots</a></li>
+        <li><a href="#">Secure Layout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="col-lg-3 col-md-6">
+    <div class="footer-box footer-contact">
+      <h5>Contact Us</h5>
+
+      <p><i class="fas fa-location-dot"></i> Sulur, Coimbatore</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-envelope"></i> info@crystalgateway.com</p>
+
+    </div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="footer-bottom">
+  <p>© 2026 Crystal Gateway. All Rights Reserved.</p>
+</div>
+
+</div>
+</footer>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script src="js/script.js"></script>
+
 
 </body>
 </html>
